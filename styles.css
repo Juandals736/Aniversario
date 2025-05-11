@@ -1,0 +1,218 @@
+/* Estilo Scrapbook / Manualidades para Aniversario */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Indie Flower', cursive;
+  background: #fff8f0;
+  color: #5c3d2e;
+  text-align: center;
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+}
+
+.header {
+  background: #fddde6;
+  padding: 30px 20px;
+  border-bottom: 5px dashed #f7a5c3;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+  text-shadow: 1px 1px #fff;
+}
+
+.nav {
+  margin-top: 15px;
+}
+
+.nav button {
+  font-family: inherit;
+  font-size: 1rem;
+  background: #ffe4ec;
+  border: 2px dashed #f7a5c3;
+  color: #5c3d2e;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav button:hover {
+  background: #f7a5c3;
+  color: white;
+  transform: scale(1.1);
+}
+
+.section {
+  display: none;
+  padding: 30px 20px;
+  animation: fadeIn 1s ease forwards;
+}
+
+.section.active {
+  display: block;
+}
+
+.next-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #f7a5c3;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.next-btn:hover {
+  background-color: #fda4af;
+  transform: scale(1.05);
+}
+
+.timeline p {
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 5px solid #f7a5c3;
+  background: #fff0f5;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.gallery img {
+  width: 100px;
+  height: auto;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #f0f;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Estilo para los botones del quiz */
+.quiz-btn {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1rem;
+  background: #fff;
+  border: 2px dashed #f9a8d4; /* Color de borde pastel */
+  color: #333;
+  padding: 12px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 80%;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-btn:hover {
+  background-color: #f9a8d4;
+  color: #fff;
+  transform: scale(1.1);
+  border-color: #f5b0c3;
+}
+
+.quiz-btn:active {
+  transform: scale(1);
+  background-color: #f5b0c3;
+  color: #fff;
+}
+
+/* Estilo de la línea de tiempo */
+.timeline {
+  margin: 20px 0;
+}
+
+.timeline-item {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9a8d4;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para la descripción emergente */
+.timeline-item:hover {
+  background-color: #f5b0c3;
+}
+
+.timeline-item::after {
+  content: attr(data-description);
+  position: absolute;
+  bottom: 110%; /* Posición encima del elemento */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  width: 250px;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+  font-size: 0.9rem;
+}
+
+/* Mostrar la descripción cuando el mouse está sobre el item */
+.timeline-item:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.gallery-item {
+  position: relative;
+  display: inline-block;
+}
+
+.gallery-item .caption {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 6px;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 90%;
+}
+
+.gallery-item:hover .caption {
+  visibility: visible;
+}
+
+.grande {
+  width: 300px;
+}
+
+.mediana {
+    width: 255px;
+}
+.pequena {
+  width: 150px;
+}
+
